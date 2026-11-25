@@ -9,6 +9,7 @@ import representativeExplorationDrilling from '../../../image/global-drilling-ex
 import representativeAugerRig from '../../../image/down-hole-installation.jpg'
 import representativeWaterWell from '../../../image/water-well-drilling.jpg'
 import representativeHydrofracturing from '../../../image/hydrofracturing.jpg'
+import representativeGeothermalLoops from '../../../image/geothermal-loops.jpg'
 import representativeVerticalDrilling from '../../../image/vertical-drilling.jpg'
 
 export const photos = {
@@ -36,10 +37,22 @@ export const servicePhotos = {
     caption: 'Illustrative high-volume water discharge • not a verified Davidson project',
     objectPosition: 'center 50%',
   },
+  'geothermal-ground-loop-systems': {
+    src: representativeGeothermalLoops,
+    alt: 'Ground-source geothermal equipment with vertical piping and steam in an outdoor installation.',
+    caption: 'Illustrative geothermal equipment • not a verified Davidson project',
+    objectPosition: 'center 48%',
+  },
   'vertical-ground-loop-drilling': {
     src: representativeVerticalDrilling,
     alt: 'A tall drilling rig positioned over a vertical borehole at a worksite.',
     caption: 'Representative vertical drilling • third-party rig, not Davidson equipment',
     objectPosition: 'center 44%',
+  },
+  'down-hole-installation': {
+    src: representativeAugerRig,
+    alt: 'A vertical drilling rig and down-hole equipment positioned at a borehole.',
+    caption: 'Illustrative down-hole drilling equipment • not a verified Davidson project',
+    objectPosition: 'center 46%',
   },
 }

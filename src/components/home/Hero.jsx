@@ -50,7 +50,7 @@ export default function Hero() {
 
     const timer = window.setInterval(() => {
       setActiveSlide((current) => (current + 1) % heroSlides.length)
-    }, 6800)
+    }, 5000)
 
     return () => window.clearInterval(timer)
   }, [reducedMotion, isPaused])

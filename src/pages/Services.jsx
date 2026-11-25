@@ -4,6 +4,7 @@ import ServiceHero from '../components/services/ServiceHero.jsx'
 import ServiceSection from '../components/services/ServiceSection.jsx'
 import { company } from '../data/company.js'
 import { capabilities } from '../data/services.js'
+import './Services.css'
 
 export default function Services() {
   return (
@@ -27,6 +28,7 @@ export default function Services() {
         <div className="services-introduction-aside">
           <span>FIVE CORE SERVICES</span>
           <strong>Drilling<br />&amp; installation</strong>
+          <small>From groundwater wells to geothermal borehole work.</small>
         </div>
       </section>
       <BlueprintLine />
@@ -40,10 +42,11 @@ export default function Services() {
           <SectionLabel light>SERVICE AREA</SectionLabel>
           <h2 id="service-area-title">Local roots.<br /><em>Regional service.</em></h2>
         </div>
-        <p>
-          Davidson Well Drilling is based in Turnerville, Georgia and serves
-          <strong> {company.serviceArea}.</strong>
-        </p>
+        <div className="service-area-detail">
+          <p>Based in Turnerville, Georgia, Davidson Well Drilling serves properties throughout</p>
+          <strong>{company.serviceArea}.</strong>
+          <a href="tel:+17067540633">Call (706) 754-6033</a>
+        </div>
       </section>
     </div>
   )

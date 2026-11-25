@@ -359,7 +359,9 @@ export function createScheduler() {
     dispose() {
       ScrollTrigger.removeEventListener('refresh', onRefresh)
       timers.forEach((timer) => window.clearTimeout(timer))
+      pending.forEach((entry) => entry.trigger.kill())
       pending.clear()
+      batches.length = 0
     },
   }
 }
