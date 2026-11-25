@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom'
 import BlueprintHeroMedia from '../components/common/BlueprintHeroMedia.jsx'
 import BlueprintLine from '../components/common/BlueprintLine.jsx'
 import RevealBlock from '../components/common/RevealBlock.jsx'
 import SectionLabel from '../components/common/SectionLabel.jsx'
+import ArrowIcon from '../components/common/ArrowIcon.jsx'
 import { photos } from '../assets/images/index.js'
 import { company } from '../data/company.js'
 
@@ -20,6 +22,7 @@ export default function About() {
           <SectionLabel>THE DAVIDSON STORY</SectionLabel>
           <h1 id="about-title">Family-owned.<em>Serving our region since 1973.</em></h1>
           <p>Rooted in Turnerville, Georgia, Davidson Well Drilling has served Northeast Georgia and Western South Carolina for generations.</p>
+          <div className="about-hero-actions"><Link className="button button-dark" to="/services">Explore services <ArrowIcon diagonal /></Link><Link className="text-link" to="/contact">Talk with Davidson <ArrowIcon diagonal /></Link></div>
         </div>
         <BlueprintHeroMedia
           src={photos.driller}
@@ -72,6 +75,7 @@ export default function About() {
         <div className="credential-copy reveal">
           <p>The company’s original website notes membership in local Home Builders Associations and certification related to Franklin Electric submersible pumps.</p>
           <p>It also identifies Baroid Industrial Drilling Products training for geothermal ground loop applications. Contact Davidson to confirm current credentials and project fit.</p>
+          <Link className="button button-outline" to="/contact">Get in touch <ArrowIcon diagonal /></Link>
         </div>
       </section>
     </>

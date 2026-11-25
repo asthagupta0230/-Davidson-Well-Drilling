@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom'
 import BlueprintLine from '../components/common/BlueprintLine.jsx'
 import RevealBlock from '../components/common/RevealBlock.jsx'
 import SectionLabel from '../components/common/SectionLabel.jsx'
 import { faqGroups } from '../data/faqs.js'
+import ArrowIcon from '../components/common/ArrowIcon.jsx'
 
 export default function FAQ() {
   return (
@@ -29,6 +31,7 @@ export default function FAQ() {
           </RevealBlock>
         ))}
       </section>
+      <section className="faq-contact-strip"><div><SectionLabel>STILL HAVE A QUESTION?</SectionLabel><h2>We’re happy to talk through your project.</h2><p>For site-specific questions or to discuss service availability, contact Davidson directly.</p></div><Link className="button button-dark" to="/contact">Contact our team <ArrowIcon diagonal /></Link></section>
     </>
   )
 }

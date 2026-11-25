@@ -48,7 +48,7 @@ function ContactForm() {
         Message <span aria-hidden="true">*</span>
         <textarea name="message" rows="5" required />
       </label>
-      <button className="button button-dark form-submit" type="submit">Review inquiry <ArrowIcon diagonal /></button>
+      <button className="button button-dark form-submit" type="submit">Check inquiry details <ArrowIcon diagonal /></button>
       <p className="form-status" role="status" aria-live="polite">{status}</p>
     </form>
   )
@@ -61,6 +61,7 @@ export default function Contact() {
         <SectionLabel light>CONTACT DAVIDSON</SectionLabel>
         <h1 id="contact-title">Let’s discuss your project.</h1>
         <p>Have questions about water well drilling or geothermal ground loops? Call, email or use the inquiry form below.</p>
+        <div className="contact-hero-actions"><a href={`tel:${company.phoneLink}`}>Call {company.phone}</a><a href={`mailto:${company.email}`}>Email Davidson</a></div>
       </section>
       <section className="contact-layout section-paper">
         <div className="contact-details reveal">

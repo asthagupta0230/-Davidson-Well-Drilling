@@ -1,7 +1,7 @@
-import representativeVintageRig from '../../../image/1142788474391354975.jpg'
-import representativeHistoricRig from '../../../image/download (1).jpg'
-import representativeTruckRig from '../../../image/download.jpg'
-import representativeBorehole from '../../../image/Drilling a Borehole and Receiving a lot  of water for our client.jpg'
+import representativeVintageRig from '../../../image/hero1.jpg'
+import representativeHistoricRig from '../../../image/hero2.jpg'
+import representativeTruckRig from "../../../image/hero33.jpg";
+import representativeBorehole from "../../../image/Drilling.jpg";
 import representativeDrillingCrew from '../../../image/download (2).jpg'
 import representativeDriller from '../../../image/download (3).jpg'
 import representativeRockDrilling from '../../../image/Drilling.jpg'

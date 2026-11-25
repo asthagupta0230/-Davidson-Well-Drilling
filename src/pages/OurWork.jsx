@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react'
 import ArrowIcon from '../components/common/ArrowIcon.jsx'
 import SectionLabel from '../components/common/SectionLabel.jsx'
@@ -101,12 +102,14 @@ export default function OurWork() {
           <SectionLabel>OUR WORK</SectionLabel>
           <h1 id="work-title">Work in the field.</h1>
           <p>A closer look at drilling equipment and field operations through representative images.</p>
+          <span className="work-gallery-count">{workPhotos.length.toString().padStart(2, '0')} PHOTOGRAPHS IN THE COLLECTION</span>
         </div>
         <p className="work-source-note reveal">Images are representative references from the supplied collection. Davidson project attribution, locations and dates are not verified.</p>
       </section>
       <section className="work-gallery-section section-paper" aria-label="Representative drilling photographs">
         <WorkGallery />
       </section>
+      <section className="work-contact-strip"><div><SectionLabel light>HAVE A PROJECT IN MIND?</SectionLabel><h2>Let’s talk about the work ahead.</h2></div><Link className="button button-light-outline" to="/contact">Contact Davidson <ArrowIcon diagonal /></Link></section>
     </>
   )
 }
