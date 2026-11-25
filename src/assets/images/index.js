@@ -1,0 +1,45 @@
+import representativeVintageRig from '../../../image/1142788474391354975.jpg'
+import representativeHistoricRig from '../../../image/download (1).jpg'
+import representativeTruckRig from '../../../image/download.jpg'
+import representativeBorehole from '../../../image/Drilling a Borehole and Receiving a lot  of water for our client.jpg'
+import representativeDrillingCrew from '../../../image/download (2).jpg'
+import representativeDriller from '../../../image/download (3).jpg'
+import representativeRockDrilling from '../../../image/Drilling.jpg'
+import representativeExplorationDrilling from '../../../image/global-drilling-exploration.jpg'
+import representativeAugerRig from '../../../image/down-hole-installation.jpg'
+import representativeWaterWell from '../../../image/water-well-drilling.jpg'
+import representativeHydrofracturing from '../../../image/hydrofracturing.jpg'
+import representativeVerticalDrilling from '../../../image/vertical-drilling.jpg'
+
+export const photos = {
+  hero: representativeVintageRig,
+  field: representativeTruckRig,
+  borehole: representativeBorehole,
+  crew: representativeDrillingCrew,
+  driller: representativeDriller,
+  rockDrilling: representativeRockDrilling,
+  explorationDrilling: representativeExplorationDrilling,
+  augerRig: representativeAugerRig,
+  servicesHero: representativeHistoricRig,
+}
+
+export const servicePhotos = {
+  'water-well-drilling': {
+    src: representativeWaterWell,
+    alt: 'A drilling rig and crew at a well site as water rises from the borehole.',
+    caption: 'Representative well drilling • not a verified Davidson project',
+    objectPosition: 'center 48%',
+  },
+  hydrofracturing: {
+    src: representativeHydrofracturing,
+    alt: 'A worker beside several strong water jets discharging into a large bore.',
+    caption: 'Illustrative high-volume water discharge • not a verified Davidson project',
+    objectPosition: 'center 50%',
+  },
+  'vertical-ground-loop-drilling': {
+    src: representativeVerticalDrilling,
+    alt: 'A tall drilling rig positioned over a vertical borehole at a worksite.',
+    caption: 'Representative vertical drilling • third-party rig, not Davidson equipment',
+    objectPosition: 'center 44%',
+  },
+}
