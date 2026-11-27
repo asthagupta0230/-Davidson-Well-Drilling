@@ -35,8 +35,8 @@ function IntroductionVisual() {
         WATER · EARTH · ENGINEERING
       </div>
 
-      <img
-        src="/images/hero.png"
+      <img 
+        src="/images/hero2.png"
         alt="Well drilling field technician wearing protective equipment"
         loading="lazy"
         className="intro-technician absolute bottom-0 left-1/2 z-10 h-[83%] max-w-none -translate-x-1/2 object-contain object-bottom drop-shadow-[0_16px_24px_rgba(0,28,60,.28)]"
