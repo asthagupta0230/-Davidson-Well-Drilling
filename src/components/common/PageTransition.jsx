@@ -1,33 +1,21 @@
-import { useLayoutEffect, useRef } from 'react'
-import { gsap, MOTION, prefersReducedMotion, scaledDuration } from '../../motion/gsap.js'
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-/**
- * Lightweight route-change curtain wipe that sweeps clear on navigation
- * without delaying route rendering, hash scrolling, or browser history.
- */
-export default function PageTransition({ pathname, enabled }) {
-  const curtainRef = useRef(null)
-  const prevPathRef = useRef(pathname)
+export default function PageTransition({ children }) {
+  const { pathname, hash } = useLocation();
 
-  useLayoutEffect(() => {
-    if (prevPathRef.current === pathname) return
-    prevPathRef.current = pathname
+  useEffect(() => {
+    if (hash) {
+      const target = document.getElementById(hash.replace("#", ""));
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth" });
+        }, 60);
+        return;
+      }
+    }
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [pathname, hash]);
 
-    const curtain = curtainRef.current
-    if (!enabled || !curtain || prefersReducedMotion()) return
-
-    gsap.killTweensOf(curtain)
-    gsap.fromTo(
-      curtain,
-      { autoAlpha: 1, clipPath: 'inset(0% 0% 0% 0%)' },
-      {
-        clipPath: 'inset(0% 0% 100% 0%)',
-        duration: scaledDuration(0.58),
-        ease: MOTION.ease.curtain,
-        onComplete: () => gsap.set(curtain, { autoAlpha: 0 }),
-      },
-    )
-  }, [pathname, enabled])
-
-  return <div className="route-curtain" ref={curtainRef} aria-hidden="true" />
+  return <div className="min-h-screen">{children}</div>;
 }

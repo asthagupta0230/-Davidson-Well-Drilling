@@ -1,28 +1,33 @@
-import { useRef } from 'react'
-import BlueprintLine from '../components/common/BlueprintLine.jsx'
-import FAQPreview from '../components/home/FAQPreview.jsx'
-import Hero from '../components/home/Hero.jsx'
-import Introduction from '../components/home/Introduction.jsx'
-import ProcessSection from '../components/home/ProcessSection.jsx'
-import ServicesOverview from '../components/home/ServicesOverview.jsx'
-import WhyDavidson from '../components/home/WhyDavidson.jsx'
-import WorkPreview from '../components/home/WorkPreview.jsx'
-import useHomeAnimations from '../hooks/useHomeAnimations.js'
+import { useEffect } from "react";
+import Hero from "../components/home/Hero/Hero.jsx";
+import Introduction from "../components/home/Introduction/Introduction.jsx";
+import ServicesShowcase from "../components/home/ServicesShowcase/ServicesShowcase.jsx";
+import Process from "../components/home/Process/Process.jsx";
+import WhyDavidson from "../components/home/WhyDavidson/WhyDavidson.jsx";
+import FeaturedHighlights from "../components/home/FeaturedHighlights/FeaturedHighlights.jsx";
+import WorkPreview from "../components/home/WorkPreview/WorkPreview.jsx";
+import Testimonials from "../components/home/Testimonials/Testimonials.jsx";
+import FinalCTA from "../components/home/FinalCTA/FinalCTA.jsx";
+import Footer from "../components/common/Footer.jsx";
 
-export default function Home({ ready = true }) {
-  const homeRef = useRef(null)
-  useHomeAnimations(homeRef, ready)
+export default function Home() {
+  useEffect(() => {
+    document.title =
+      "Davidson Well Drilling, Inc. | Water Well & Geothermal Solutions Since 1973";
+  }, []);
 
   return (
-    <div className="home-page" ref={homeRef}>
+    <main className="min-h-screen overflow-x-hidden bg-white text-[#102A40]">
       <Hero />
       <Introduction />
-      <BlueprintLine />
-      <ServicesOverview />
+      <ServicesShowcase />
+      <Process />
       <WhyDavidson />
-      <ProcessSection />
+      <FeaturedHighlights />
       <WorkPreview />
-      <FAQPreview />
-    </div>
-  )
+      <Testimonials />
+      <FinalCTA />
+      <Footer />
+    </main>
+  );
 }

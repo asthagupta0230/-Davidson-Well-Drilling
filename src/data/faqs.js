@@ -1,56 +1,110 @@
-import { company } from './company.js'
-
-export const faqGroups = [
+export const faqCategories = [
   {
-    title: 'Water well drilling',
+    id: "general",
+    label: "General Questions",
     items: [
       {
-        question: 'What kind of water wells does Davidson drill?',
-        answer: 'Davidson describes 6-inch drilled water wells with casing to bedrock. Its published depth guidance for the surrounding area is approximate; actual site requirements vary.',
+        question: "How long has Davidson Well Drilling, Inc. been in business?",
+        answer:
+          "Davidson Well Drilling, Inc. was established in 1973 and has served residential and commercial property owners across our region for over five decades.",
+        isDraft: false,
       },
       {
-        question: 'How deep is the well casing?',
-        answer: 'Davidson’s original website says its fresh water wells are cased to bedrock, roughly 70 to 100 feet in surrounding areas. The actual depth depends on local conditions.',
+        question: "What services does Davidson Well Drilling provide?",
+        answer:
+          "We specialize in Fresh Water Well Drilling, Water Pumps, Pump Service, Hydrofracturing, Geothermal Ground Loop Installation, Vertical Ground Loop Drilling, and Downhole Installation.",
+        isDraft: false,
+      },
+      {
+        question: "How can I request an estimate for my property?",
+        answer:
+          "You can call us directly at (706) 754-6033 or submit your project details through our Request an Estimate page so our team can review your location and scope.",
+        isDraft: false,
       },
     ],
   },
   {
-    title: 'Hydrofracturing',
+    id: "water-well-drilling",
+    label: "Water Well Drilling",
     items: [
       {
-        question: 'What is hydrofracturing?',
-        answer: 'Davidson describes injecting clean water at high pressure and volume into a low-yield well to open or clear existing water-producing fractures. The published process uses no additives.',
+        question: "What does fresh water well drilling involve on a residential property?",
+        answer:
+          "Fresh water well drilling includes evaluating site access and well placement, drilling through overburden and bedrock to reach water-bearing zones, installing well casing, and completing the downhole pump setup.",
+        isDraft: false,
       },
       {
-        question: 'Can hydrofracturing restore every low-yield well?',
-        answer: 'No outcome is guaranteed. The company says hydrofracturing may regenerate a well in many cases, but suitability and results depend on the well and its conditions.',
+        question: "How deep does a water well need to be drilled in Northeast Georgia or Upstate South Carolina?",
+        answer:
+          "[Draft for review] Well depth varies significantly depending on local bedrock fractures and water table conditions on each specific parcel. Davidson Well Drilling evaluates regional geology and drills until an appropriate water-bearing zone is reached.",
+        isDraft: true,
       },
     ],
   },
   {
-    title: 'Geothermal systems',
+    id: "hydrofracturing",
+    label: "Hydrofracturing",
     items: [
       {
-        question: 'What does Davidson do on a geothermal project?',
-        answer: 'Davidson’s published scope is drilling and down-hole installation of vertical ground loops and transfer medium. The company can work with a geothermal or heating-and-air contractor.',
+        question: "What is hydrofracturing for a water well?",
+        answer:
+          "Hydrofracturing is a specialized downhole process that uses controlled water pressure to clean and widen existing natural fractures in bedrock, helping improve water flow into a low-producing well.",
+        isDraft: false,
       },
       {
-        question: 'Does Davidson install the complete heating and cooling system?',
-        answer: 'The original website says its geothermal work is limited to the drilling and down-hole installation. The building system is coordinated with a geothermal or HVAC contractor.',
+        question: "When should a property owner consider hydrofracturing?",
+        answer:
+          "[Draft for review] Hydrofracturing is typically evaluated when an existing drilled bedrock well produces insufficient gallons per minute for household or property demand, offering a potential alternative to drilling a second well.",
+        isDraft: true,
       },
     ],
   },
   {
-    title: 'Company and service area',
+    id: "geothermal-systems",
+    label: "Geothermal Systems",
     items: [
       {
-        question: 'Where does Davidson Well Drilling serve?',
-        answer: `Davidson is based in Turnerville, Georgia, and serves ${company.serviceArea}.`,
+        question: "What is the difference between geothermal ground loop installation and vertical ground loop drilling?",
+        answer:
+          "Vertical ground loop drilling creates deep vertical boreholes in the earth, while geothermal ground loop installation and downhole installation place, seal, and connect the closed-loop piping that exchanges heat with the ground.",
+        isDraft: false,
       },
       {
-        question: 'How can I discuss a project?',
-        answer: `Call ${company.phone} or ${company.tollFree}, or email ${company.email}.`,
+        question: "Why are vertical ground loops used on properties in our region?",
+        answer:
+          "[Draft for review] Vertical ground loops require a much smaller surface footprint than horizontal trenches and reach depths where earth temperatures remain stable throughout the year.",
+        isDraft: true,
       },
     ],
   },
-]
+  {
+    id: "pump-services",
+    label: "Pump Services",
+    items: [
+      {
+        question: "Do you install and service water pumps?",
+        answer:
+          "Yes. Davidson Well Drilling provides water pump installation, downhole installation, and ongoing pump service to keep well water delivery dependable.",
+        isDraft: false,
+      },
+      {
+        question: "What signs indicate a well pump system may need service?",
+        answer:
+          "[Draft for review] Common signs include sudden loss of water pressure, fluctuating flow, rapid pump cycling, or no water at the tap. Call (706) 754-6033 to discuss pump service diagnostics.",
+        isDraft: true,
+      },
+    ],
+  },
+  {
+    id: "service-area",
+    label: "Service Area",
+    items: [
+      {
+        question: "Which regions does Davidson Well Drilling serve?",
+        answer:
+          "Davidson Well Drilling, Inc. serves communities across Northeast Georgia and Upstate South Carolina.",
+        isDraft: false,
+      },
+    ],
+  },
+];
